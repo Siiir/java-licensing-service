@@ -12,6 +12,7 @@ public class BoughtLicense {
     protected final long id;
     @lombok.NonNull
     protected BuyableLicense baseLicense;
+    @lombok.NonNull // For the `@RequiredArgsConstructor to take it as an arg.
     protected long ownerId;
 
     @Override
