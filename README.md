@@ -1,5 +1,4 @@
-
-# [📜 Licensing service](https://github.com/Siiir/java-licensing-service) on Spring Boot 🍃
+# 📜 Licensing service on Spring Boot 🍃
 
 🌐 **Ostock microservice** that manages licenses for Optima Growth's products.
 
@@ -9,14 +8,15 @@
 ## 🌟 Features
 
 - 🔧 **Create, Read, Update, and Deactivate Licenses:** Manage the lifecycle of licenses.
-- 🗂 **Modularity:** All licenses created for customers are based on the root "buyable license" and contain additional owner-specific info.
+- 🗂  **Modularity:** All licenses created for customers are based on the root "buyable license" and contain additional owner-specific info.
 
 
 ## ⚡ Quick Start
 
 ### Prerequisites
 * ☕ **JDK** – java development kit
-* 🏗️ **Maven** – built tool
+* 🏗️  **Maven** – built tool
+* 🐙 **Git** – version control system
 
 ### Running Locally
 
@@ -40,7 +40,7 @@ $ mvn spring-boot:run
 
 - ☕ **Java**: Core programming language
 - 🍃 **Spring Boot**: Framework used to simplify the development of new Spring applications
-- 🏗️ **Maven**: Dependency management and project build tool
+- 🏗️  **Maven**: Dependency management and project build tool
 
 
 ## 📬 Contact
