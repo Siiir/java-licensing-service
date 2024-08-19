@@ -14,7 +14,7 @@
 ## ⚡ Quick Start
 
 ### Prerequisites
-* ☕ **JDK** – java development kit
+* ☕ **JDK 17** – java development kit for java 17
 * 🏗️  **Maven** – built tool
 * 🐙 **Git** – version control system
 
