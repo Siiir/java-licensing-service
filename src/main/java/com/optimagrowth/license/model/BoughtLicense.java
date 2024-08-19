@@ -12,7 +12,6 @@ public class BoughtLicense {
     protected final long id;
     @lombok.NonNull
     protected BuyableLicense baseLicense;
-    @lombok.NonNull
     protected long ownerId;
 
     @Override
