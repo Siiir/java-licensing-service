@@ -18,41 +18,29 @@ public class BoughtLicenseController {
 
     @PostMapping
     public ResponseEntity<LocalBoughtLicense> create(
-            @PathParam("base_id") Long buyable_license_id, @PathParam("owner_id") Long owner_id,
+            @RequestParam("base_id") Long buyable_license_id, @RequestParam("owner_id") Long owner_id,
             @RequestHeader(value = "Accept-Language", required = false) Locale locale) {
-        if (buyable_license_id == null || owner_id == null) {
-            return ResponseEntity.badRequest().build();
-        }
         return ResponseEntity.ofNullable(this.service.createLicense(locale, buyable_license_id, owner_id));
     }
 
     @GetMapping
     public ResponseEntity<LocalBoughtLicense> read(
-            @PathParam("id") Long id,
+            @RequestParam("id") Long id,
             @RequestHeader(value = "Accept-Language", required = false) Locale locale) {
-        if (id == null) {
-            return ResponseEntity.badRequest().build();
-        }
         return ResponseEntity.ofNullable(this.service.readBoughtLicense(locale, id));
     }
 
     @PutMapping
     public ResponseEntity<LocalBoughtLicense> update(
-            @PathParam("id") Long id, @PathParam("new_owner_id") Long new_owner_id,
+            @RequestParam("id") Long id, @RequestParam("new_owner_id") Long new_owner_id,
             @RequestHeader(value = "Accept-Language", required = false) Locale locale) {
-        if (id == null || new_owner_id == null) {
-            return ResponseEntity.badRequest().build();
-        }
         return ResponseEntity.ofNullable(this.service.updateBoughtLicense(locale, id, new_owner_id));
     }
 
     @DeleteMapping
     public ResponseEntity<LocalBoughtLicense> deactivate(
-            @PathParam("id") Long id,
+            @RequestParam("id") Long id,
             @RequestHeader(value = "Accept-Language", required = false) Locale locale) {
-        if (id == null) {
-            return ResponseEntity.badRequest().build();
-        }
         return ResponseEntity.ofNullable(this.service.deactivateBoughtLicense(locale, id));
     }
 }
