@@ -42,7 +42,7 @@ wget -qO- "http://localhost:8080/v1/license/shop?id=1"
 ```  
 
 
-## 📝 Endpoints + 🛠️ User Guide
+## 📝 Endpoints + 🛠️ User Guide for `wget` client
 
 **Accept-Language**: All endpoints accept both English (`en`) and Polish (`pl`). Defaults to `en`.  
 **Ids of buyables**: Ids of buyable licenses (as of writing) are {1, 2}.  
@@ -53,7 +53,7 @@ wget -qO- "http://localhost:8080/v1/license/shop?id=1"
 - **Endpoint**: "/v1/license/shop"
 - **Usage**: 
   `wget [--method=GET] [--header="Accept-Language: {accepted_lang}"] "http://localhost:8080/v1/license/shop?id={buyable_license_id}"`  
-- **E.g.**:  
+- **Examples**:  
   `wget --method=GET "http://localhost:8080/v1/license/shop?id=1"`  
   `wget --header="Accept-Language: pl" "http://localhost:8080/v1/license/shop?id=2"`  
 
@@ -62,7 +62,7 @@ wget -qO- "http://localhost:8080/v1/license/shop?id=1"
 - **Endpoint**: "/v1/license"
 - **Usage**: 
   `wget --method=POST [--header="Accept-Language: {accepted_lang}"] "http://localhost:8080/v1/license?base_id={buyable_license_id}&owner_id={}"`  
-- **E.g.**:  
+- **Examples**:  
   `wget --method=POST --header="Accept-Language: en" "http://localhost:8080/v1/license?base_id=2&owner_id=100"`  
   `wget --method=POST --header="Accept-Language: pl" "http://localhost:8080/v1/license?base_id=1&owner_id=101"`  
 
@@ -71,7 +71,7 @@ wget -qO- "http://localhost:8080/v1/license/shop?id=1"
 - **Endpoint**: "/v1/license"
 - **Usage**: 
   `wget [--method=GET] [--header="Accept-Language: {accepted_lang}"] "http://localhost:8080/v1/license?id={buyable_license_id}"`  
-- **E.g.**:  
+- **Examples**:  
   `wget "http://localhost:8080/v1/license?id=1"`  
   `wget --method=GET --header="Accept-Language: en" "http://localhost:8080/v1/license?id=2"`  
 
@@ -80,7 +80,7 @@ wget -qO- "http://localhost:8080/v1/license/shop?id=1"
 - **Endpoint**: "/v1/license"
 - **Usage**: 
   `wget --method=PUT [--header="Accept-Language: {accepted_lang}"] "http://localhost:8080/v1/license?id={}&new_owner_id={}"`  
-- **E.g.**:  
+- **Examples**:  
   `wget --method=PUT --header="Accept-Language: en" "http://localhost:8080/v1/license?id=1&new_owner_id=102"`  
   `wget --method=PUT --header="Accept-Language: pl" "http://localhost:8080/v1/license?id=2&new_owner_id=103"`  
 
@@ -89,7 +89,7 @@ wget -qO- "http://localhost:8080/v1/license/shop?id=1"
 - **Endpoint**: "/v1/license"
 - **Usage**: 
   `wget --method=DELETE [--header="Accept-Language: {accepted_lang}"] "http://localhost:8080/v1/license?id={}"`  
-- **E.g.**:  
+- **Examples**:  
   `wget --method=DELETE "http://localhost:8080/v1/license?id=1"`  
   `wget --method=DELETE "http://localhost:8080/v1/license?id=2"`  
 
