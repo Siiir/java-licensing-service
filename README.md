@@ -35,6 +35,12 @@ $ mvn install
 $ mvn spring-boot:run
 ```
 
+Run any valid http client in a separate terminal session:
+```bash
+# Play with an endpoint using `wget`
+wget "http://localhost:8080/v1/license/shop?id=1"
+```  
+
 
 ## 📝 Endpoints + 🛠️ User Guide
 
@@ -55,10 +61,10 @@ $ mvn spring-boot:run
 - **Method**: POST
 - **Endpoint**: "/v1/license"
 - **Usage**: 
-  `wget --method=POST [--header="Accept-Language: {accepted_lang}"] "http://localhost:8080/v1/license/shop?id={buyable_license_id}&owner_id={}"`  
+  `wget --method=POST [--header="Accept-Language: {accepted_lang}"] "http://localhost:8080/v1/license?base_id={buyable_license_id}&owner_id={}"`  
 - **E.g.**:  
-  `wget --method=POST --header="Accept-Language: en" "http://localhost:8080/v1/license?id=2&owner_id=100"`  
-  `wget --method=POST --header="Accept-Language: pl" "http://localhost:8080/v1/license?id=1&owner_id=101"`  
+  `wget --method=POST --header="Accept-Language: en" "http://localhost:8080/v1/license?base_id=2&owner_id=100"`  
+  `wget --method=POST --header="Accept-Language: pl" "http://localhost:8080/v1/license?base_id=1&owner_id=101"`  
 
 ### 3. **Read Bought License**
 - **Method**: GET

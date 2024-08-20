@@ -18,12 +18,12 @@ public class BoughtLicenseController {
 
     @PostMapping
     public ResponseEntity<LocalBoughtLicense> create(
-            @PathParam("id") Long id, @PathParam("owner_id") Long owner_id,
+            @PathParam("base_id") Long buyable_license_id, @PathParam("owner_id") Long owner_id,
             @RequestHeader(value = "Accept-Language", required = false) Locale locale) {
-        if (id == null || owner_id == null) {
+        if (buyable_license_id == null || owner_id == null) {
             return ResponseEntity.badRequest().build();
         }
-        return ResponseEntity.ofNullable(this.service.createLicense(locale, id, owner_id));
+        return ResponseEntity.ofNullable(this.service.createLicense(locale, buyable_license_id, owner_id));
     }
 
     @GetMapping
