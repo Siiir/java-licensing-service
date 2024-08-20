@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.optimagrowth</groupId>
 	<artifactId>licensing-service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1</version>
 	<name>License Service</name>
 	<description>Ostock licensing service</description>
 	<url/>
